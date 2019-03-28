@@ -1,0 +1,316 @@
+---
+
+title: "1 Testas CLI, Git, GitHub, R, Skaitiniai" #nekeisti
+
+author: "Zilvinas Kubilius" 
+
+institute: "Vilniaus Universitetas (EVAF)" #nekeisti 
+
+date: "`r format(Sys.time(), '%Y-%m-%d %H:%M')`"#nekeisti
+
+output: #nekeisti
+
+  html_document: #nekeisti
+
+    number_sections: true #nekeisti
+
+---
+
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, collapse = TRUE, error = FALSE)
+
+```
+
+# Apie testa
+
+Testas susideda is keliu daliu. 
+
+
+
+* Pirmi 10 uzdavinyiu yra multiple choice klausimai. Tik vienas klausimas yra teisingas. Pasirinkta atsakyma pazymekite i skliaustelius yrase x: [x] to atsakymo, kuri pasirenkate. Jeigu pazymesite du atsakymus, arba nepazymesite nei vieno, klausimas nebus uzskaitytas. 
+
+* Tada savo pasirinkimui turite dvi alternatyvas 11-am klausimui. Pasirinkite, i kuri viena is dvieju norite atsakyti (jeigu siandien gera nuotaika ir dar lieka laiko, galite ir i abu atsakyti, as ne pries). Kaip irasyti, pateikta irasymui skirtose vietose. Test karunuoja 12 miksuotas uzdavinys.
+
+* Paskutinis uzdavinys reikalauja kombinuotu CLI + R ziniu.
+
+* Teste leidziama naudotis internetu, ranka rasytais uzrasais, bet NE paskaitu skaidremis atspausdintu tekstu, ar kolega sedinciu salia!
+
+* Leidziama naudotis skaitiniu sarasu bei skaitiniu failais.
+
+* Neleidziama copy-paste kitu autoriu teksto (14 uzdavinys)
+
+* Testo trukme: iveikiama per 30 min, bet open end (max 60 min)
+
+* Iskilus klausimams, spreskite kaip suprantate, testo metu i klausimus neatskinesiu. Jeigu labai dvejojate, eilytes pradzioje dedate koemntavimo zenkla ir rasomte savo komentara... (worst case scenarijus)
+
+* Snabzdejimas, nusirasinejimas, ziurejimas skersai reiskia - 0 tasku ir ate, ate....
+
+
+
+
+
+## CLI
+
+1. (1 taskas) Kuri is komandu sukuria aplanka "DAI" darbineje direktorijoje?
+
+    - [ ] `mkdir DAI`
+
+    - [x ] `touch DAI`
+
+    - [ ] `mkdir ../DAI`
+
+    - [ ] `cd /DAI`
+
+    
+
+2. (1 taskas) Kuri is komandu sukuria aplanka "DAI/test" darbineje direktorijoje?
+
+    - [ ] `mkdir -p DAI/test`
+
+    - [ ] `touch DAI/test`
+
+    - [ x] `mkdir ../DAI/test`
+
+    - [ ] `cd /DAI/test`
+
+
+
+3. (1 taskas) Kuri is CLI komandu parodo, kurioje direktorijoje esate?
+
+    - [ ] `git pwd`
+
+    - [ x] `pwd`
+
+    - [ ] `getwd()`
+
+    - [ ] `dir()`
+
+
+
+4. (1 taskas) Kuri is komandu atspausdina sarasa failu esanciu darbineje CLI direktorijoje? 
+
+    - [x ] `ls`
+
+    - [ ] `listfiles`
+
+    - [ ] `dirfile`
+
+    - [ ] `lsfl`
+
+
+
+## Git & Github
+
+5. (1 taskas) Kuri is komandu inicijuoja git repozitorija? 
+
+    - [ ] `git init`
+
+    - [ ] `git remote add`
+
+    - [x ] `git pull`
+
+    - [ ] `git boom`
+
+
+
+6. (1 taskas) Tarkime jus norite parsisiusti repo "https://github.com/name/folder", kuri komanda leidza tai padaryt? 
+
+    - [x ] `git clone https://github.com/name/folder`
+
+    - [ ] `git pull https://github.com/name/folder`
+
+    - [ ] `git pull https://github.com/name/folder master`
+
+    - [ ] `git pull clone master https://github.com/name/folder`
+
+
+
+7. (1 taskas) Kuri is komandu ne stage'ins failu ir ne commit'ins ju (pastaba: kai paskutinio commit nera sukurtu jokiu nauju failu)? 
+
+    - [ ] `git add . && git commit -m "...."`
+
+    - [ x] `git add -A && git commit -m "...."`
+
+    - [ ] `git add -U && commit -m "...."`
+
+    - [ ] `git add -am "...."`
+
+
+
+## R 
+
+8. (1 taskas) Instaliuokite ir paleiskite paketa "KernSmooth" (naudodamiesi *Console*). Paleidus matysite consoleje copyright pranesima, kuris is ju teisingas? 
+
+    - [ ] `Copyright M. P. Wand 1997-2009`
+
+    - [ ] `Copyright Github 2009-2013`
+
+    - [ x] `Copyright Matthew Wand 1997-2009`
+
+    - [ ] `Copyright M. P. Wand 1990-2009`
+
+
+
+## Skaitiniai
+
+9. (1 taskas) Estijoje parlamento rinkimuose, ultra-desinioji EKRE partija: 
+
+    - [x ] padidino frakcijos dydi
+
+    - [ ] sumazino frakcijos dyi
+
+    - [ ] frakcijos dydis nepakito
+
+    - [ ] nepateko i parlamenta
+
+
+
+10. (1 taskas) OECD pristatytoje atnaujintoje pasaulio ekonomikos prognozeje:  
+
+    - [ ] OECD pagerino pasaulio ekonomikos augimo perspektyva
+
+    - [x ] OECD pablogino pasaulio ekonomikos augimo perspektyva
+
+    - [ ] Nepakeite pasaulio ekonomikos augimo perspektyvos
+
+    - [ ] OECD apie pasaulio ekonomikos augimo perspektyva neuzsimine
+
+
+
+### ALT 1
+
+11. (8 taskai) OECD video pristatyme ragina bendradarbiauti salis nares kartu vykdant investicinius projektus, nes nors valstybiu skolos ir didokos, esant mazoms palukanu normoms, toks ilgalaikiu strukturiniu reformu finansavimas duotu daugiau naudos. Problema ta, jog norint pasiekti geru rezultatu, reikia, jog dauguma ES saliu tokia politika vykdytu vienu metu. Kaip manote, ar toks siulymas yra realistiskas, fone politiniu tendenciju kurios vyksta ES? Argumentuokite.
+ekonomika pagrista isiskolinimu, jeigu salys tarpusavyje daugiau bendradarbiautu geretu visu valstybiu ekonomine bukle ir zmoniu gyvenimo 
+
+
+### ALT 2
+
+11. (8 taskai) Siais metais arteja prezidento rinkimai. Ta proga klausimas: Kaip manote, su kokiais didziausiais issukiais susidurs sekantis Lietuvos Prezidentas vidaus (iskaitant ir ekonomikos) bei uzsienio politikoje? 
+
+Prezidentas, kaip zinote, turi tik labai ribotas vidaus politikos galias. Prezidanto igaliojimai 84 LR Konstitucijos straipnsyje (http://www3.lrs.lt/home/Konstitucija/Konstitucija.htm).
+
+
+
+
+
+```{r, eval=TRUE}
+
+#Parasykite apie 150 zodziu. 
+
+#Rasykite VIETOJ Lore ipsum... teksto t.y. tarpe tarp abieju kabuciu.
+
+#Jeigu norite zinoti kiek zodziu parasete, galite runninti tik sit snippet' jo kampytyje nuspaude ant zalio trikampio rodancio i desine
+
+
+
+str1 <- 
+
+"
+alt2
+ekonomikos augimas letes, todel tai bus vienas didziausiu issukiu. isliks visuomenes nelygybes problema, kuri tures buti sprendziama. kova su seseline ekonomika.  Del itin agresyvios Rusijos uzsienio politikos tures buti palaikomi glaudus santykiai su Vakaru valstybemis, toliau teks dirbti integracijos su sajungininkemis ir savo kaimynemis linkme. taip pat turetu buti vykdomas valstybes apsaugos sistemos testinumas. privales islaikyti panasia pozicija Kinijos valstybes atzvilgiu kaip ir Vakaru europos valstybes(ja spausti). 
+
+
+
+
+"
+
+sapply(strsplit(str1," "),length)
+
+```
+
+
+
+## CLI & R
+
+12. (14 tasku) Siame uzdavinyje turite parsisiusti duomenis, juos importuoti i R, ir atlikti skaiciavimus. Atlikte zemiau pateiktus veiksmus pagal pateikta eiles seka:
+
+    * Savo Github paskyroje susikurkite repo "ds-test-1". *NEinicializuokite* su README.md. Klonuokite folderi i savo darbine aplinka (patartina pries tai CLI darbine direktorija pasikeist i Desktop). 
+
+    * Su CLI (GitBash) nuskaitykite duomenis is https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data 
+
+    [Patarimas: naudokite `curl url` komanda po jos perduodant komanda taip, kad CLI sukurtu faila census.csv [failas census.csv turi buti irasytas lokaliame folderyje ds-test-1]
+
+    * Alternatyviai galite duomenis nuskaityti ir iskart su R
+
+    * Pasitikrinkite ar R naudojasi ta pacia working directory (ds-test-1) ir ar aptinka pasisiusta faila (jeigu su curl). Jeigu ne, pasikeiskite.
+
+    * Toliau pildykite R koda zemiau esanciame snippet. 
+
+
+
+```{r, collapse=TRUE}
+
+## Zemiau pateiktos komandos, ka turite padaryti. 
+
+## Atitinkamas R komandas rasykite po komentaro (aprasymo) eilute. 
+
+## Visada galite pasitikrinti ar R skaiciuoja toje eiluteje paleide CTRL+ENTER, arba visa snippet su zaliu trikampiu
+
+
+
+# importuokite duomenis i R, importuotus duomenis priskirkite objektui census <- ....
+
+
+
+# atspausdinkite virsutines 8 eilutes ir pirmus 4 stulpelius
+
+
+
+
+
+# atspausdinkite apatines 4 eilutes ir 5, 6, 7, 8 stulpelius  
+
+
+
+
+
+# apskaiciuokite X39 stulpelio vidurki
+
+
+
+
+
+# apskaiciuokite X39 stulpelio mediana
+
+
+
+
+
+# apskaiciuokite X39 stulpelio miniuma
+
+
+
+
+
+# apskaiciuokite X39 stulpelio maksimuma 
+
+
+
+
+
+```
+
+
+
+
+
+## Darbo uzbaigimo ir ship'inimo instrukcija:
+
+
+
+* Virsuje pakeiskite: `author: "Vardas Pavarde"` pakeiskite i savo varda ir pavarde
+
+* Issaugokite si pakeista faila pervadinant ji i "StudNr_Vardas_Pavarde.Rmd" (save as)
+
+* Tada virsuje spauskite ant Knit trikampiuko ir pasirinkite `knit to html`. 
+
+* Pushinkit lokalia repo i Github. Folderyje turi buti 3 failai: "census.csv", "StudNr_Vrdas_Pavarde.Rmd", "StudNr_Vrdas_Pavarde.html"
+
+* Isitikinkite jog Githube guli repo kopija ir repo url irasykite i https://docs.google.com/spreadsheets/d/1H_ts3wTKYZ4rocmFseR2YJtZHfhJ543MUWsTTa7x5Kc/edit?usp=sharing F stulpeli
+
+
+
+
